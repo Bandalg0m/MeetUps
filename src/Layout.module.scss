@@ -1,0 +1,18 @@
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 1440px;
+    height: 100vh;
+    background: #1E1E1E;
+    margin: 0 auto;
+
+}
+
