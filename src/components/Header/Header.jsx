@@ -1,28 +1,24 @@
 import React from 'react'
-import {useNavigate} from 'react-router-dom'
+import {Link} from "react-router-dom";
+import styles from './Header.module.scss'
+import HeaderControls from "./HeaderControls";
+import HeaderNav from "./HeaderNav";
+import logo1 from '../../assets/img/it-philosfy.svg'
+import logo2 from '../../assets/img/liga-logo.svg'
 
-import header from './Header.module.scss'
-
-import Itphylosophy from '../../assets/img/it-philosfy.svg'
-import liga from '../../assets/img/liga-logo.svg'
-import user_icon from '../../assets/img/user-icon.svg'
-
-const Header = () => {
-    const navigate = useNavigate()
+function Header() {
     return (
-        <nav className={header.header}>
-            <div className={header.logo}>
-                <div className={header.logo__text}>MeetUps</div>
-                <div className={header.logo__block}>
-                    <img className={header['logo__img--phylosophy']} src={Itphylosophy} alt="It-phylosophy"/>
-                    <img className={header['logo__img--liga']} src={liga} alt="Liga"/>
+        <div className={styles.header}>
+            <div className={styles.logo}>
+                <Link to='/' className={styles.logo__text}>MeetUps</Link>
+                <div className={styles.logo__block}>
+                    <img className={styles['logo__img--phylosophy']} src={logo1} alt="It-phylosophy"/>
+                    <img className={styles['logo__img--liga']} src={logo2} alt="Liga"/>
                 </div>
             </div>
-            <div className={header['header-controls']}>
-                <img className={header['header-controls__item']} src={user_icon} alt="user icon"
-                     onClick={() => navigate('/')}/>
-            </div>
-        </nav>
+            <HeaderNav/>
+            <HeaderControls/>
+        </div>
     )
 }
-export default Header;
+export default Header

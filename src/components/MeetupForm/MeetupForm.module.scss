@@ -1,0 +1,99 @@
+.title {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  color: #E9E9E9;
+  margin-bottom: 27px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+
+  &__row {
+    margin-bottom: 44px;
+
+    &--date {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 44px;
+    }
+  }
+  &__block {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+
+    &--date {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      margin-left: 150px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+  &__title {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #E9E9E9;
+    width: 170px;
+  }
+}
+
+@mixin form-input {
+    margin-left: 20px;
+    margin-bottom: 26px;
+    background: #2C2C2C;
+    border: 3px solid #4C3F78;
+    border-radius: 3px;
+    color: #B4B4C0;
+    padding-left: 2%;
+}
+
+.form__input--short {
+  @include form-input;
+  margin-right: 33%;
+  width: 61%;
+  height: 50px;
+
+  &::placeholder {
+    color: #B4B4C0;
+  }
+}
+
+.form__input--wide {
+  @include form-input;
+  padding-top: 10px;
+  width: 100%;
+  height: 200px;
+  resize: none;
+}
+
+.form__input--middle {
+  @include form-input;
+  padding-top: 10px;
+  width: 100%;
+  height: 104px;
+  resize: none;
+}
+
+.form__input--date {
+  @include form-input;
+  margin-right: 21%;
+  width: 50%;
+  height: 50px;
+
+  &::placeholder {
+    color: #B4B4C0;
+  }
+}
+
