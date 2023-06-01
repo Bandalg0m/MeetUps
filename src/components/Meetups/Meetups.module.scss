@@ -1,0 +1,45 @@
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  height: 170px;
+  margin-bottom: 40px;
+  color: #E9E9E9;
+  background: #2C2C2C;
+  padding: 18px 18px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.subs {
+  white-space: nowrap;
+  width: 135px;
+  color: #B85526;
+}
+
+.time {
+  margin-bottom: 20px;
+}
+
+.title {
+  display: flex;
+  width: 100%;
+  margin-right: 20px;
+}
+
+.style.desc {
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  color: #B4B4C0;
+}
+
+.author {
+  color: #E9E9E9;
+}

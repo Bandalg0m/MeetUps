@@ -1,12 +1,9 @@
-const SET_USER = "SET_USER";
-const LOG_OUT = "LOG_OUT";
-
 const defaultState = {
   currentUser: {},
   isAuth: false,
 };
 
-export default function userReducer(state = defaultState, action) {
+export default function meetupsReducer(state = defaultState, action) {
   switch (action.type) {
     case SET_USER:
       return {
@@ -26,5 +23,3 @@ export default function userReducer(state = defaultState, action) {
       return state;
   }
 }
-export const setUser = (user) => ({ type: SET_USER, payload: user });
-export const logout = () => ({ type: LOG_OUT });
